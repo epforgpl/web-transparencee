@@ -8,7 +8,7 @@
 						<a href="http://transparencee.org/organization/epanstwo-foundation/"><img src="<?php echo $src ?>/images/epanstwo.png" /></a>
 					</li>
 					<li>
-						<a href="http://transparencee.org/organization/techsoup-europe/"><img src="<?php echo $src ?>/images/techsoup_new.png" /></a>
+						<a href="http://transparencee.org/organization/techsoup-europe/"><img src="<?php echo $src ?>/images/techsoup-footer.png" /></a>
 					</li>
 					<li>
 						<a href="http://transparencee.org/organization/why-not/"><img src="http://transparencee.org/wp-content/uploads/2015/09/zastone_color.png" /></a>
@@ -157,7 +157,7 @@
 					$orgs = $query->found_posts.' organizations';
 				}
 		?>
-		$('#<?php echo ucwords($ch->slug); ?>').attr('title','<?php echo $orgs ?>');
+		$('#<?php echo ucwords($ch->slug); ?>').attr('title','<?php echo ucwords($ch->name); ?>');
 		<?php endforeach; ?>
 		
 		<?php if ($menuitem != ''): ?>

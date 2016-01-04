@@ -3,6 +3,7 @@ $(function() {
 	
 	
 	$('path').tooltip({track: true});
+	$('g').tooltip({track: true});
 	
 	$('.filter-title').on('click',function() {
 		$(this).parents('.filter-wrapper').toggleClass('opened');

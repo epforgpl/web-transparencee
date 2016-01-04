@@ -8,12 +8,13 @@
 			<div class="gradient"><img src="<?php echo $src ?>/images/logo-bg.png" /></div>
 		</div>
 	</div>
-	<?php if (is_front_page()): ?>
+	<?php if (is_front_page() || $_GET['s']!=''): ?>
 	<div class="map-text">
 		<h1>transparen<span>cee</span></h1>
 		<div class="oneliner">Technology for Transparency in CEE and Eurasia.</div>
 		<a href="<?php echo get_the_permalink(8); ?>" class="btn black-border mt25">Learn & Connect</a>
 	</div>
+	
 	<?php elseif (is_singular('person')): ?>
 		<div class="row zindex5">
 			<div class="small-12 medium-6 large-2 columns pt80 mt60 relative end">
@@ -54,7 +55,7 @@
 			</div>
 		</div>
 	<?php elseif (is_singular('organization') || is_singular('project') || is_singular('event')): ?>
-		<div class="row zindex5 <?php if (is_singular('event')): ?>mt40<?php else: ?><?php endif; ?>">
+		<div class="row zindex5 penone <?php if (is_singular('event')): ?>mt40<?php else: ?><?php endif; ?>">
 			<div class="small-12 large-4 columns pt100 mt40 relative end">
 				<h1 class="mb15"><?php the_title(); ?></h1>
 				<div class="oneliner"><?php the_field('oneliner'); ?></div>
@@ -97,7 +98,8 @@
 				<a href="<?php echo home_url(); ?>">transparencee</a> &GT; analysis &GT; <?php the_title(); ?>
 			<?php endif; ?>
 		</div>
-	<?php $svg_map = file_get_contents($src.'/images/europe2.svg'); ?>
+	<?php $svg_map = file_get_contents($src.'/images/europe3.svg'); ?>
+	<?php // $svg_map = file_get_contents($src.'/images/europe2.svg'); ?>
 	<div class="map-svg show-for-large-up">
 		<?php echo $svg_map; ?>
 	</div>

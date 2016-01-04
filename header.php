@@ -25,7 +25,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/css/foundation.min.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/css/fonts.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/css/jquery-ui.min.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/style.css?v=1.03" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="icon" href="<?php echo $src ?>/images/favicon.png" type="image/png"/>
 	<?php
@@ -56,7 +56,13 @@
 				</div>
 				<a href="https://twitter.com/Transparen_CEE" class="dblock fright social-icon ml10"><img src="<?php echo $src ?>/images/twitter.png" /></a>
 				<a href="https://www.facebook.com/transparencee?fref=ts" class="dblock fright social-icon ml20"><img src="<?php echo $src ?>/images/facebook.png" /></a>
-				<?php echo wp_nav_menu( array('theme_location' => 'primary', 'menu_class' => 'main-menu inline-list fright show-for-large-up') ); ?>
+
+				<form method="get" action="/" class="fright searchform">
+					<input type="text" placeholder="Search" value="<?php echo $_GET['s']; ?>" name="s" />
+					<input type="submit" value="" />
+				</form>
+					
+				<?php echo wp_nav_menu( array('theme_location' => 'primary', 'menu_class' => 'main-menu inline-list fleft show-for-large-up') ); ?>
 			</div>
 		</div>
 	</div>

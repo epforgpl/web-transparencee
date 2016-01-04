@@ -268,16 +268,19 @@ table {border:0;}
 			#Estonia,
 			#Russia {
 				&:hover * {
-				fill:#91DCCC;
+					fill:#005FA7;
 				}
 			}
 			
 			.st3, .st5 {
 				cursor:pointer;
 				position:relative;
+				* {
+					fill:#5c74b8;
+				}
 								
 				&:hover {
-					fill:#91DCCC;
+					fill:#005FA7 !important;
 				}
 			}
 		}
@@ -317,6 +320,10 @@ table {border:0;}
 
 .penone {
 	pointer-events:none;
+	
+	.btn {
+		pointer-events:auto;
+	}
 }
 
 .content-wrapper, .home-content-wrapper {
@@ -342,6 +349,17 @@ table {border:0;}
 	p {
 		font-size:16px;
 		line-height:175%;
+		a {
+			color:#175fa6;
+			text-decoration: underline;
+			
+			&:hover {
+				color:#ff705b;
+			}
+			&:visited {
+				color:#2885e0;
+			}
+		}
 	}
 	.sidebar {
 		h2 {
@@ -947,4 +965,70 @@ table {border:0;}
 
 .red {
 	color:$red;
+}
+
+.search-title {
+	h2 {
+		font-size:24px;
+		font-family:$font-bold;
+		line-height:110%;
+		text-transform: uppercase;
+	}
+	h3 {
+		font-size:24px;
+		line-height:100%;
+		text-transform: uppercase;
+		color:$red;
+	}
+}
+
+.searchform {
+	border:2px solid #fff;
+	height:35px;
+	border-radius:18px;
+	overflow: hidden;
+	margin-top:21px;
+	margin-right:3px;
+	
+	input[type="text"] {
+		float:left;
+		border:0;
+		background:transparent;
+		box-shadow: none;
+		width:calc(100% - 30px);
+		padding:0 5px;
+		margin-bottom:0;
+		height:32px;
+		color:#fff;
+	}
+	input[type="submit"] {
+		float:right;
+		width:30px;
+		height:33px;
+		background:url(images/search.svg) no-repeat top 4px center transparent;
+		background-size:65% 65%;
+		border:0;
+		
+	}
+	
+	::-webkit-input-placeholder {
+    color:#fff;
+		opacity:1;
+	}
+	:-moz-placeholder {
+		color:#fff;
+		opacity:1;
+	}
+	::-moz-placeholder {
+		color:#fff;
+		opacity:1;
+	}
+	:-ms-input-placeholder {
+		color:#fff;
+		opacity:1;
+	}
+}
+
+.wp-caption {
+	max-width:100%;
 }
