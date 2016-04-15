@@ -25,7 +25,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/css/foundation.min.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/css/fonts.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/css/jquery-ui.min.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/style.css?v=1.03" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo $src ?>/style.css?v=1.04" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="icon" href="<?php echo $src ?>/images/favicon.png" type="image/png"/>
 	<?php

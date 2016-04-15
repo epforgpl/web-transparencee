@@ -12,7 +12,7 @@
 						<a href="" class="btn grey-border smaller">&larr;&nbsp; back</a>
 					</div>
 				</div>
-				<div class="small-12 large-9 columns large-offset-1 large-pt10">
+				<div class="small-12 large-9 columns large-offset-1 large-pt10 content">
 					<?php $img = get_field('logo'); ?>
                                         <?php if ($img['url']!=''): ?>
                                                 <img src="<?php echo $img['sizes']['medium']; ?>" alt="Logo - <?php the_title(); ?>" class="mb50" />

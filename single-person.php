@@ -12,7 +12,7 @@
 						<a href="javascript: history.go(-1)" class="btn grey-border smaller">&larr;&nbsp; back</a>
 					</div>
 				</div>
-				<div class="small-12 large-9 columns large-offset-1 large-pt10">
+				<div class="small-12 large-9 columns large-offset-1 large-pt10 content">
 					<?php the_field('about'); ?>
 					<?php if (get_field('twitter')!=''): ?>
 						<a href="https://twitter.com/<?php the_field('twitter'); ?>" class="btn red-border mt20">Follow on Twitter</a>

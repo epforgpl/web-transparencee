@@ -50,7 +50,8 @@
 						<?php endif; ?>
 					</a>
 				</div>
-				<div class="small-12 large-9 columns large-offset-1 large-pt10">
+				<div class="small-12 large-9 columns large-offset-1 large-pt10 content">
+					<?php the_title('<h2>','</h2>'); ?>
 					<?php 
 						if (get_field('show_quote') == true):
 					?>
