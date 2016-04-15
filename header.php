@@ -41,6 +41,11 @@
 	
 	<meta name="viewport" content="width=device-width" />
 	<script src="<?php echo $src ?>/js/vendor/modernizr.js"></script>
+
+	<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	#mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}  #mc_embed_signup label { color: #fff } 
+	</style>
 </head>
 
 
