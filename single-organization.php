@@ -40,7 +40,7 @@
 									$photo = get_field('photo',$member['member'][0]); 
 									$flname = get_the_title($member['member'][0]);
 								?>
-								<img src="<?php echo $photo['sizes']['medium']; ?>" alt="<?php echo $flname; ?>" />
+								<img src="<?php echo $photo['sizes']['thumbnail']; ?>" alt="<?php echo $flname; ?>" />
 								<h3><?php echo $flname; ?></h3>
 								<span><?php echo $member['function']; ?></span>
 							</a>
