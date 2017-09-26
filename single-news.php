@@ -14,7 +14,7 @@
 							$photo = get_field('photo',$author[0]);
 						?>
 					</div>
-					<a href="<?php echo get_permalink($author[0]); ?>" class="author-box">
+					<a href="<?php echo get_permalink($author[0]); ?>" class="author-box show-for-large">
 						<img src="<?php echo $photo['sizes']['medium']; ?>" />
 						<div class="flname"><?php echo get_the_title($author[0]); ?></div>
 						
@@ -78,6 +78,43 @@
 			if (is_array($org)):
 		?>
 			<div class="content-wrapper">
+				<div class="text-center">
+				<a href="<?php echo get_permalink($author[0]); ?>" class="author-box hide-for-large">
+						<img src="<?php echo $photo['sizes']['medium']; ?>" />
+						<div class="flname"><?php echo get_the_title($author[0]); ?></div>
+						
+						<?php
+							function my_posts_where( $where )
+							{
+								$where = str_replace("meta_key = 'members_%_member'", "meta_key LIKE 'members_%_member'", $where);
+								return $where;
+							}
+							add_filter('posts_where', 'my_posts_where');
+
+							$args = array(
+								'post_type'	=> 'organization',
+								'meta_query' => array(
+									array(
+										'key' => 'members_%_member',
+										'value' => '"' . $author[0] . '"',
+										'compare' => 'LIKE'
+									)
+								)
+							);
+							$the_query = new WP_Query( $args );
+						?>
+						<?php if ($the_query->have_posts()): ?>
+							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+								<?php foreach (get_field('members') as $member): ?>
+									<?php if ($member['member'][0] == $author[0]): ?>
+										<div class="function"><?php echo $member['function']; ?></div>
+									<?php endif; ?>
+								<?php endforeach; break; ?>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+					</a>
+				</div>
 				<div class="row">
 					<div class="small-12 large-2 columns sidebar">
 						<h2>Read<br />also</h2>
